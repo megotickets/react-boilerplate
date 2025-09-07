@@ -127,7 +127,7 @@ function MegoTicketsDemo() {
             <div className="ticket-demo">
               <h3>Ticket Component</h3>
               <Ticket
-                ticketId="8113f3c5-0ebc-4033-b8b4-0a6ae45753fa"
+                ticketId={import.meta.env.VITE_TICKET_ID ?? "6f057f40-0cb5-42bb-b068-77e7b5fa4ed2"}
                 googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
                 onTicketLoad={(data) => {
                   console.log("Ticket loaded:", data);
