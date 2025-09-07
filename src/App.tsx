@@ -36,10 +36,7 @@ function App() {
 
 // Demo Component showcasing all the components
 function MegoTicketsDemo() {
-  const {
-    loggedAs,
-    isConnectedWithMego,
-  } = useWeb3Context();
+  const { loggedAs, isConnectedWithMego } = useWeb3Context();
   const { language } = useLanguage();
   const [popupData, setPopupData] = React.useState<MegoPopupData>({
     isOpen: false,
@@ -68,10 +65,51 @@ function MegoTicketsDemo() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>MegoTickets React Components Demo</h1>
-        <p>
-          Demonstrating @megotickets/core, @megotickets/wallet, and
-          @megotickets/payments
+        <h1 style={{ padding: "0 20px" }}>MegoTickets React Boilerplate</h1>
+        <div style={{ padding: "20px" }}>
+          <img
+            src="/cover.jpg"
+            alt="Mego Tickets"
+            style={{ width: "100%", borderRadius: "12px" }}
+          />
+        </div>
+        <p style={{ textAlign: "center", padding: "20px" }}>
+          <a
+            href="https://www.npmjs.com/package/@megotickets/core"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#fff", textDecoration: "underline" }}
+          >
+            @megotickets/core
+          </a>
+          ,{" "}
+          <a
+            href="https://www.npmjs.com/package/@megotickets/wallet"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#fff", textDecoration: "underline" }}
+          >
+            @megotickets/wallet
+          </a>
+          , and{" "}
+          <a
+            href="https://www.npmjs.com/package/@megotickets/payments"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#fff", textDecoration: "underline" }}
+          >
+            @megotickets/payments
+          </a>
+          <br />
+          are open sourced at:{" "}
+          <a
+            href="https://github.com/megotickets/react-components"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#fff", textDecoration: "underline" }}
+          >
+            https://github.com/megotickets/react-components
+          </a>
         </p>
       </header>
 
@@ -79,7 +117,9 @@ function MegoTicketsDemo() {
         {/* Language Selector */}
         <section className="demo-section">
           <h2>Language Selector</h2>
-          <LanguageSelector />
+          <div style={{ textAlign: "center" }}>
+            <LanguageSelector />
+          </div>
           <p>Current language: {language}</p>
         </section>
 
@@ -95,7 +135,11 @@ function MegoTicketsDemo() {
                 megoWalletContainerStyle: { backgroundColor: "#000" },
                 megoWalletIconStyle: { backgroundColor: "#000", color: "#fff" },
                 modalStyle: {
-                  headerStyle: { backgroundColor: "#8bfbd9", borderTopLeftRadius: "10px", borderTopRightRadius: "10px" },
+                  headerStyle: {
+                    backgroundColor: "#8bfbd9",
+                    borderTopLeftRadius: "10px",
+                    borderTopRightRadius: "10px",
+                  },
                   bodyStyle: { backgroundColor: "#000" },
                 },
               }}
@@ -107,8 +151,14 @@ function MegoTicketsDemo() {
               }}
             />
             {/* WalletConnectButton */}
-            <h3 style={{ marginTop: "20px" }}>Simple RainbowKit/WalletConnect Button</h3>
-            <WalletConnectButton />
+            {!loggedAs && (
+              <div style={{ width: "100%", textAlign: "center" }}>
+                <h3 style={{ marginTop: "20px" }}>
+                  Simple RainbowKit/WalletConnect Button
+                </h3>
+                <WalletConnectButton />
+              </div>
+            )}
             {loggedAs && (
               <div className="user-info">
                 <p>Logged in as: {loggedAs}</p>
@@ -127,7 +177,10 @@ function MegoTicketsDemo() {
             <div className="ticket-demo">
               <h3>Ticket Component</h3>
               <Ticket
-                ticketId={import.meta.env.VITE_TICKET_ID ?? "6f057f40-0cb5-42bb-b068-77e7b5fa4ed2"}
+                ticketId={
+                  import.meta.env.VITE_TICKET_ID ??
+                  "6f057f40-0cb5-42bb-b068-77e7b5fa4ed2"
+                }
                 googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
                 onTicketLoad={(data) => {
                   console.log("Ticket loaded:", data);
@@ -158,7 +211,6 @@ function MegoTicketsDemo() {
                 shareEmail={ShareEmailOptions.OPTIONAL}
               />
             </div>
-
           </div>
         </section>
 
@@ -193,6 +245,10 @@ function MegoTicketsDemo() {
             </MegoButton>
           </div>
         </section>
+
+        <footer className="app-footer" style={{ textAlign: "center" }}>
+          Made with ❤️ by <a href="https://yomi.digital" target="_blank" rel="noopener noreferrer">YOMI</a>
+        </footer>
       </main>
 
       {/* Popup */}
