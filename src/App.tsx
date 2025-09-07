@@ -68,7 +68,7 @@ function MegoTicketsDemo() {
         <h1 style={{ padding: "0 20px" }}>MegoTickets React Boilerplate</h1>
         <div style={{ padding: "20px" }}>
           <img
-            src="/cover.jpg"
+            src="https://megotickets.github.io/react-boilerplate/cover.jpg"
             alt="Mego Tickets"
             style={{ width: "100%", borderRadius: "12px" }}
           />
