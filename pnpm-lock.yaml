@@ -12,8 +12,8 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2(@tanstack/query-core@5.87.1)(@types/react@19.1.12)(bufferutil@4.0.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)
       '@megotickets/payments':
-        specifier: ^1.0.4
-        version: 1.0.4(@tanstack/query-core@5.87.1)(@types/react@19.1.12)(bufferutil@4.0.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)
+        specifier: ^1.0.5
+        version: 1.0.5(@tanstack/query-core@5.87.1)(@types/react@19.1.12)(bufferutil@4.0.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)
       '@megotickets/wallet':
         specifier: ^1.0.2
         version: 1.0.2(@tanstack/query-core@5.87.1)(@types/react@19.1.12)(bufferutil@4.0.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)
@@ -445,8 +445,8 @@ packages:
       react: ^18.0.0
       react-dom: ^18.0.0
 
-  '@megotickets/payments@1.0.4':
-    resolution: {integrity: sha512-bHw+cefF7ULKJUE2/s+dPKD9ge7i6LAGD5c7YQy7+WJSjNBoV9hcimK9tdKgtc2PAnxvBlzU7GU5iv2f9nlqcw==}
+  '@megotickets/payments@1.0.5':
+    resolution: {integrity: sha512-W+1f/sjnBpB606m3qs2R7q3SdtAmQbPsQ87ZcUVuk1BaQIw+dWky4QAwPv2cRMeDcXiHP+wwC7kYsE+pfyCyqQ==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
@@ -3199,7 +3199,7 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@megotickets/payments@1.0.4(@tanstack/query-core@5.87.1)(@types/react@19.1.12)(bufferutil@4.0.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)':
+  '@megotickets/payments@1.0.5(@tanstack/query-core@5.87.1)(@types/react@19.1.12)(bufferutil@4.0.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)':
     dependencies:
       '@megotickets/core': 1.0.2(@tanstack/query-core@5.87.1)(@types/react@19.1.12)(bufferutil@4.0.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)
       '@react-google-maps/api': 2.20.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
